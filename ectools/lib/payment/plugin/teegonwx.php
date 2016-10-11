@@ -186,16 +186,16 @@ final class ectools_payment_plugin_teegonwx extends ectools_payment_app {
     /**
      * 支付成功回打支付成功信息给支付网关
      */
-    function ret_result($paymentId,$ret){
-                $tgarr = array(
-                    array("source_account"=>"main","target_account"=>"main","amount"=> $ret['cur_money']),
-                );
-                $tgreturn = json_encode($tgarr);
-                $tgsign = md5($tgreturn.$this->getConf('PrivateKey', __CLASS__));
-                header('Teegon-Rsp-Sign: '.$tgsign);
-                echo $tgreturn;
-                exit;
-    }
+    //function ret_result($paymentId,$ret){
+    //            $tgarr = array(
+    //                array("source_account"=>"main","target_account"=>"main","amount"=> $ret['cur_money']),
+    //            );
+    //            $tgreturn = json_encode($tgarr);
+    //            $tgsign = md5($tgreturn.$this->getConf('PrivateKey', __CLASS__));
+    //            header('Teegon-Rsp-Sign: '.$tgsign);
+    //            echo $tgreturn;
+    //            exit;
+    //}
 
     /**
      * 后台配置参数设置
